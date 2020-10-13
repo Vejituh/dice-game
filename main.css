@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    background-color: #C1CDE8;
+    color: #DBE7FF;
+    padding: 0 2ch;
+    font-size: 18px;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 1ch;
+}
+
+.game-container {
+    max-width: 65ch;
+    background-color: #0F1B36;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 2ch auto;
+    border-radius: 20px;
+    padding: 4ch 6ch;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.20), 0 6px 6px rgba(0,0,0,0.20);
+}
+
+.player-scores, .player-dice-rolls {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2ch;
+}
+
+#player1-dice-roll, #player2-dice-roll {
+    background-color: #C1CDE8;
+    color: #0F1B36;
+    padding: 0.5ch 0;
+    width: 3ch;
+    border-radius: 20px;
+    font-weight: 900;
+    font-size: 50px;
+}
+
+.game-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+#roll-dice-button,  #reset-game-button{
+    padding: 2ch 3ch;
+    border-radius: 20px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#roll-dice-button {
+    background-color: #C1E8C8;
+    color: #001C00;
+}
+
+#roll-dice-button:hover {
+    box-shadow: 0px 5px 5px 5px rgba(193,232,200,0.25);
+}
+
+#reset-game-button {
+    display: none;
+    background-color: #75819C;
+    color: #DBE7FF;
+}
+
+#reset-game-button:hover {
+    box-shadow: 0px 5px 5px 5px rgba(117,129,156,0.25);
+}
+
+.current {
+    box-shadow: 0px 5px 5px 5px rgba(219, 231, 255,0.25);
+}
+
+.active {
+    display: block;
+}
