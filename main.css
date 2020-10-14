@@ -69,7 +69,6 @@ h1 {
 }
 
 #reset-game-button {
-    display: none;
     background-color: #75819C;
     color: #DBE7FF;
 }
@@ -84,4 +83,8 @@ h1 {
 
 .active {
     display: block;
+}
+
+.inactive {
+    display: none;
 }
