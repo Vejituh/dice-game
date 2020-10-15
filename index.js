@@ -10,6 +10,18 @@ const rollDiceBtn = document.getElementById("roll-dice-button");
 const resetGameBtn = document.getElementById("reset-game-button");
 const doubleNothingBtn = document.getElementById("double-nothing-button");
 
+const pickAplayer = () => {
+    let playerAnswer = prompt("Pick Heads or Tales", "Heads").toLowerCase();
+    let random = Math.round(Math.random());
+    console.log(random);
+    if (playerAnswer === "heads" && random === 0 || playerAnswer === "tales" && random === 1) {
+        player1Turn = true;
+    } else {
+        player1Turn = false
+        message.textContent = "Player 2 Turn";
+    }
+}
+
 const randomNum = () => {
     return Math.floor(Math.random() * (6 - 1 +1) +1)
 }
