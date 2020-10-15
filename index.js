@@ -27,6 +27,20 @@ const checkWinner = () => {
     }
 }
 
+const resetGame = () => {
+    player1Score = 0;
+    player2Score = 0;
+    player1ScoreDisplay.textContent = 0;
+    player2ScoreDisplay.textContent = 0;
+    player1DiceRoll.textContent = "-";
+    player2DiceRoll.textContent = "-";
+    message.textContent = "Player 1 Turn"
+    rollDiceBtn.classList.remove("inactive");
+    rollDiceBtn.classList.add("active");
+    resetGameBtn.classList.remove("active");
+    resetGameBtn.classList.add("inactive");
+}
+
 rollDiceBtn.addEventListener("click", function() {
     if(player1Turn) {
         player1Score += randomNum();
@@ -34,6 +48,7 @@ rollDiceBtn.addEventListener("click", function() {
         player1ScoreDisplay.textContent = player1Score;
         player1DiceRoll.classList.remove("current");
         player2DiceRoll.classList.add("current");
+        message.textContent = "Player 2 Turn";
         player1Turn = false;
     } else {
         player2Score += randomNum();
@@ -41,7 +56,10 @@ rollDiceBtn.addEventListener("click", function() {
         player2ScoreDisplay.textContent = player2Score;
         player2DiceRoll.classList.remove("current");
         player1DiceRoll.classList.add("current");
+        message.textContent = "Player 1 Turn";
         player1Turn = true;
     }
     checkWinner();
 })
+
+resetGameBtn.addEventListener("click", resetGame);
