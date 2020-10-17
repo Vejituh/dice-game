@@ -16,9 +16,13 @@ const pickAplayer = () => {
     console.log(random);
     if (playerAnswer === "heads" && random === 0 || playerAnswer === "tales" && random === 1) {
         player1Turn = true;
+        player2DiceRoll.classList.remove("current");
+        player1DiceRoll.classList.add("current");
     } else {
         player1Turn = false
         message.textContent = "Player 2 Turn";
+        player2DiceRoll.classList.add("current");
+        player1DiceRoll.classList.remove("current");
     }
 }
 
@@ -54,6 +58,7 @@ const resetGame = () => {
     resetGameBtn.classList.remove("active");
     resetGameBtn.classList.add("inactive");
     doubleNothingBtn.classList.remove("inactive");
+    pickAplayer();
 }
 
 const addScore = () => {
