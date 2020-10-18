@@ -77,6 +77,10 @@ span {
     white-space:nowrap;
 }
 
+#roll-dice-button:focus,  #reset-game-button:focus, #double-nothing-button:focus {
+    outline: none;
+}
+
 #roll-dice-button {
     background-color: #C1E8C8;
     color: #001C00;
